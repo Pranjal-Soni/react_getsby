@@ -37,6 +37,7 @@ export const query = graphql`
             node {
               id
               title
+              category
               description {
                 description
               }

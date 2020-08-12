@@ -6,7 +6,6 @@ const getCat = items => {
     let holdItems = items.map(items => {
         return items.node.category
     })
-    console.log(holdItems)
     let holdCategories = new Set(holdItems)
     let categories = Array.from(holdCategories)
     categories = ["all", ...categories]
@@ -33,7 +32,7 @@ export default class CourseCart extends Component {
                 return {mycourses:keepItsafe}
             })
         } else{
-            let holdme = keepItsafe.filter(({node})=> node.catagory===category)
+            let holdme = keepItsafe.filter(({node})=> node.category===category)
             this.setState(()=>{
                 return {mycourses:holdme}})
         }
